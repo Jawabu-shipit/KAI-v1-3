@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya AI Medical Assistant - Project Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-green-700 mb-4">Kenya-Localized AI Medical Assistant</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">A comprehensive project proposal for developing AI-driven clinical decision support tailored for Kenyan healthcare professionals</p>
+        </header>
+
+        <!-- Executive Summary -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">Executive Summary</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-medium text-green-700 mb-2">Form Factor</h3>
+                    <p class="text-gray-600 mb-4">Website (Phase 1) + Android app (Phase 2)</p>
+                    
+                    <h3 class="font-medium text-green-700 mb-2">Core Functionality</h3>
+                    <p class="text-gray-600 mb-4">AI-driven clinical decision support, medical calculators, and curated Kenyan guideline library</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-green-700 mb-2">Target Audience</h3>
+                    <p class="text-gray-600 mb-4">Doctors, medical students, healthcare institutions in Kenya</p>
+                    
+                    <h3 class="font-medium text-green-700 mb-2">Data Sources</h3>
+                    <p class="text-gray-600">Kenya Ministry of Health (MoH), WHO-AFRO, KEMRI, KEML, local care pathways</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objectives & Success Criteria -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">Objectives & Success Criteria</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-lg font-medium text-green-700 mb-3">Primary Objectives</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">•</span>
+                        Deliver safe, explainable AI assistant with differential diagnoses aligned with Kenyan guidelines
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">•</span>
+                        Provide fast, reliable medical calculators and searchable reference library
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">•</span>
+                        Ensure compliance with Kenya's Data Protection Act (DPA, 2019)
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">•</span>
+                        Maximize usability for Kenyan clinicians, including rural practitioners
+                    </li>
+                </ul>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-green-800 mb-2">Performance Targets</h4>
+                    <ul class="text-sm text-green-700 space-y-1">
+                        <li>• p95 response time &lt; 6s for AI queries</li>
+                        <li>• p95 response time &lt; 3s for calculators</li>
+                        <li>• ≥95% uptime for MVP</li>
+                        <li>• Zero critical errors in validated test sets</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-blue-800 mb-2">Quality Metrics</h4>
+                    <ul class="text-sm text-blue-700 space-y-1">
+                        <li>• 100% AI outputs include citations</li>
+                        <li>• ≥80% clinicians report actionable outputs</li>
+                        <li>• 100% DPA compliance</li>
+                        <li>• Zero PHI breaches in testing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Phases -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6 border-b border-gray-200 pb-2">Development Phases</h2>
+            
+            <div class="space-y-8">
+                <!-- Phase 1 -->
+                <div class="border-l-4 border-green-500 pl-6">
+                    <h3 class="text-xl font-semibold text-green-700 mb-3">Phase 1: Website + Backend (5 Weeks)</h3>
+                    <p class="text-gray-600 mb-4">Deliver a secure, web-based AI Medical Assistant with core functionality for clinicians and students.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">Backend APIs (FastAPI)</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• JWT authentication with RBAC</li>
+                                <li>• AI decision support endpoint</li>
+                                <li>• Medical calculators (BMI, GFR, Wells, etc.)</li>
+                                <li>• Full-text search for guidelines</li>
+                                <li>• Subscription management</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">Website (Next.js)</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Secure login with 2FA option</li>
+                                <li>• AI Console with clinical input forms</li>
+                                <li>• Calculator hub with validation</li>
+                                <li>• Reference library with search</li>
+                                <li>• Admin portal for content management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="border-l-4 border-blue-500 pl-6">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Phase 2: Flutter Android App (5 Weeks)</h3>
+                    <p class="text-gray-600 mb-4">Extend functionality to mobile app with offline capabilities and push notifications.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">Mobile Features</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• AI Console with quick-entry flows</li>
+                                <li>• On-device calculator execution</li>
+                                <li>• Cached reference library (50MB max)</li>
+                                <li>• Offline mode for calculators</li>
+                                <li>• Push notifications via Firebase</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">Mobile Enhancements</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Sync endpoints for bookmarks</li>
+                                <li>• Mobile-specific telemetry</li>
+                                <li>• Rate limiting with quotas</li>
+                                <li>• Kiswahili UI toggle</li>
+                                <li>• Low-storage optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6 border-b border-gray-200 pb-2">Technical Architecture</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-800 mb-3">Frontend Stack</h4>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Next.js with SSR</li>
+                        <li>• Flutter for Android</li>
+                        <li>• WCAG 2.1 AA compliance</li>
+                        <li>• Dark mode support</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-800 mb-3">Backend Stack</h4>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• FastAPI with Uvicorn</li>
+                        <li>• PostgreSQL 15 with RLS</li>
+                        <li>• Redis for caching/queues</li>
+                        <li>• S3-compatible storage</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-800 mb-3">AI & Search</h4>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• RAG with Qdrant vector DB</li>
+                        <li>• GPT-4o-mini via proxy</li>
+                        <li>• SentenceTransformers</li>
+                        <li>• Kenya-specific priors</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Design & Guardrails -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibent text-gray-800 mb-6 border-b border-gray-200 pb-2">AI Design & Safety</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-medium text-red-700 mb-3">Safety Guardrails</h4>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">•</span>
+                            Drug-drug interaction validation
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">•</span>
+                            Dose range checks by age/weight
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">•</span>
+                            Red-flag triggers for urgent referral
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">•</span>
+                            Confidence thresholds for refusal
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium text-green-700 mb-3">Quality Metrics</h4>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">•</span>
+                            Top-3 differential recall ≥90%
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">•</span>
+                            Treatment concordance ≥95%
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">•</span>
+                            Hallucination rate &lt;1%
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">•</span>
+                            100% citation coverage
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6 border-b border-gray-200 pb-2">Detailed Timeline</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-green-800 mb-3">Phase 1 - Weeks 1-5</h4>
+                    <div class="grid md:grid-cols-5 gap-4 text-sm">
+                        <div>
+                            <h5 class="font-medium text-green-700">Week 1</h5>
+                            <p class="text-green-600">Stakeholder workshops, data schema, auth setup</p>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-green-700">Week 2</h5>
+                            <p class="text-green-600">RAG pipeline, AI endpoint, calculators, web UI</p>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-green-700">Week 3</h5>
+                            <p class="text-green-600">Reference library, admin portal, monitoring</p>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-green-700">Week 4</h5>
+                            <p class="text-green-600">Security hardening, load testing, UAT</p>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-green-700">Week 5</h5>
+                            <p class="text-green-600">Buffer, production deployment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-blue-800 mb-3">Phase 2 - Weeks 6-10</h4>
+                    <div class="grid md:grid-cols-5 gap-4 text-sm">
+                        <div>
+                            <h5 class="font-medium text-blue-700">Week 1</h5>
+                            <p class="text-blue-600">Flutter setup, auth flows, design system</p>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-blue-700">Week 2</h5>
+                            <p class="text-blue-600">Mobile UI, caching, offline sync</p>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-blue-700">Week 3</h5>
+                            <p class="text-blue-600">Offline mode, push notifications, i18n</p>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-blue-700">Week 4</h5>
+                            <p class="text-blue-600">Beta testing, accessibility, security</p>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-blue-700">Week 5</h5>
+                            <p class="text-blue-600">Play Store submission, documentation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance & Security -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6 border-b border-gray-200 pb-2">Compliance & Security</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-red-800 mb-3">Data Protection</h4>
+                    <ul class="text-sm text-red-700 space-y-1">
+                        <li>• Kenya DPA 2019 compliance</li>
+                        <li>• TLS 1.2+, AES-256 encryption</li>
+                        <li>• PHI de-identification pipeline</li>
+                        <li>• Data subject rights workflows</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-yellow-800 mb-3">Clinical Safety</h4>
+                    <ul class="text-sm text-yellow-700 space-y-1">
+                        <li>• Disclaimers on all AI outputs</li>
+                        <li>• Human-in-the-loop reminders</li>
+                        <li>• Monthly clinical advisory reviews</li>
+                        <li>• Incident response procedures</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-purple-800 mb-3">Accessibility</h4>
+                    <ul class="text-sm text-purple-700 space-y-1">
+                        <li>• WCAG 2.1 AA compliance</li>
+                        <li>• Screen reader support</li>
+                        <li>• Dyslexia-friendly fonts</li>
+                        <li>• Keyboard navigation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Roadmap -->
+        <section class="bg-white rounded-lg shadow-sm p-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6 border-b border-gray-200 pb-2">Future Roadmap</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-medium text-gray-800 mb-3">Phase 3+ Features</h4>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            Institutional dashboards and analytics
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            Advanced polypharmacy planners
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            Private fine-tuned LLM hosting
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            EMR integrations with FHIR APIs
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            iOS app development
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium text-gray-800 mb-3">Priority Conditions</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <h5 class="text-sm font-medium text-green-700">Infectious Diseases</h5>
+                            <p class="text-xs text-gray-600">Malaria, HIV, TB, pneumonia, typhoid</p>
+                        </div>
+                        <div>
+                            <h5 class="text-sm font-medium text-blue-700">NCDs</h5>
+                            <p class="text-xs text-gray-600">Hypertension, diabetes, asthma/COPD</p>
+                        </div>
+                        <div>
+                            <h5 class="text-sm font-medium text-pink-700">Maternal/Pediatric</h5>
+                            <p class="text-xs text-gray-600">ANC red flags, neonatal sepsis, malnutrition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>Kenya AI Medical Assistant - Technical Project Proposal</p>
+            <p class="mt-2">Designed for compliance with Kenya's healthcare standards and data protection requirements</p>
+        </footer>
+    </div>
+</body>
+</html>

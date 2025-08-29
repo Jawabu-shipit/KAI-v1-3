@@ -1,0 +1,27 @@
+{
+  "name": "Kenya AI Medical Assistant",
+  "short_name": "Kenya AI Medical",
+  "description": "AI-powered clinical decision support system for Kenyan healthcare professionals",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#059669",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["medical", "health", "productivity"],
+  "lang": "en-KE",
+  "dir": "ltr"
+}

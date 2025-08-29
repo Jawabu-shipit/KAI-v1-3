@@ -1,0 +1,308 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to match emerald green design brief */
+  --background: #ffffff; /* Clean white base */
+  --foreground: #475569; /* Dark gray for text */
+  --card: #f1f5f9; /* Light gray for cards */
+  --card-foreground: #475569; /* Dark text for cards */
+  --popover: #ffffff; /* White popover */
+  --popover-foreground: #475569; /* Dark text for popovers */
+  --primary: #059669; /* Emerald 600 primary */
+  --primary-foreground: #ffffff; /* White text on primary */
+  --secondary: #10b981; /* Emerald 500 secondary */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+  --muted: #f1f5f9; /* Light gray muted */
+  --muted-foreground: #6b7280; /* Gray text for muted */
+  --accent: #10b981; /* Emerald accent */
+  --accent-foreground: #ffffff; /* White text for accent */
+  --destructive: #ef4444; /* Red for errors */
+  --destructive-foreground: #ffffff; /* White text for destructive */
+  --border: #e5e7eb; /* Light gray borders */
+  --input: #ffffff; /* White input background */
+  --ring: rgba(5, 150, 105, 0.5); /* Emerald focus ring */
+  --chart-1: #059669; /* Primary chart color */
+  --chart-2: #10b981; /* Secondary chart color */
+  --chart-3: #4b5563; /* Tertiary chart color */
+  --chart-4: #6b7280; /* Quaternary chart color */
+  --chart-5: #8b5cf6; /* Purple chart color */
+  --radius: 0.5rem; /* Corner rounding */
+  --sidebar: #f1f5f9; /* Light sidebar */
+  --sidebar-foreground: #475569; /* Dark sidebar text */
+  --sidebar-primary: #059669; /* Primary sidebar */
+  --sidebar-primary-foreground: #ffffff; /* White sidebar text */
+  --sidebar-accent: #10b981; /* Accent sidebar */
+  --sidebar-accent-foreground: #ffffff; /* White accent text */
+  --sidebar-border: #e5e7eb; /* Light sidebar border */
+  --sidebar-ring: rgba(5, 150, 105, 0.5); /* Emerald sidebar ring */
+  /* Updated font variables to use Geist and IBM Plex Sans */
+  --font-geist: "Geist", system-ui, sans-serif;
+  --font-ibm-plex: "IBM Plex Sans", system-ui, sans-serif;
+  /* Updated font variables to use Satoshi for headings and system fonts for body */
+  --font-satoshi: "Satoshi", system-ui, sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+  --primary: #10b981;
+  --primary-foreground: #ffffff;
+  --secondary: #059669;
+  --secondary-foreground: #ffffff;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: rgba(16, 185, 129, 0.5);
+  --chart-1: #10b981;
+  --chart-2: #059669;
+  --chart-3: #64748b;
+  --chart-4: #94a3b8;
+  --chart-5: #a855f7;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #10b981;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #059669;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #334155;
+  --sidebar-ring: rgba(16, 185, 129, 0.5);
+}
+
+/* Updated Google Fonts import to include Geist, IBM Plex Sans, Satoshi, and JetBrains Mono */
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap");
+
+@theme inline {
+  /* Updated font configuration to use Geist for headings and IBM Plex Sans for body text */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-satoshi), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    /* Using system fonts for optimal readability and performance */
+    @apply bg-background text-foreground font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* Updated headings to use Satoshi for premium, modern typography */
+    @apply font-serif font-bold;
+  }
+  /* Added code and pre styling for technical content */
+  code,
+  pre {
+    @apply font-mono;
+  }
+}
+
+/* Added custom 3D animations and effects */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateX(5deg);
+  }
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(15deg);
+  }
+}
+
+@keyframes pulse3d {
+  0%,
+  100% {
+    transform: scale(1) rotateZ(0deg);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  50% {
+    transform: scale(1.05) rotateZ(2deg);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes slideInUp3d {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0) rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-rotate3d {
+  animation: rotate3d 20s linear infinite;
+}
+
+.animate-pulse3d {
+  animation: pulse3d 2s infinite;
+}
+
+.animate-slideInUp3d {
+  animation: slideInUp3d 0.8s ease-out;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) rotateX(5deg) rotateY(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Added mobile-specific optimizations and improved responsive animations */
+@media (max-width: 640px) {
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-rotate3d {
+    animation: rotate3d 15s linear infinite;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px) rotateX(2deg) rotateY(1deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Enhanced touch targets for mobile */
+@media (max-width: 768px) {
+  button,
+  a[role="button"],
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  input,
+  textarea,
+  select {
+    min-height: 44px;
+  }
+}
+
+/* Improved text scaling for better readability */
+@media (max-width: 480px) {
+  .text-8xl {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .text-6xl {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .text-5xl {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-rotate3d,
+  .animate-pulse3d,
+  .animate-slideInUp3d {
+    animation: none;
+  }
+
+  .hover-lift {
+    transition: none;
+  }
+
+  .hover-lift:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: #047857;
+    --secondary: #059669;
+    --accent: #0d9488;
+    --border: #374151;
+  }
+}
